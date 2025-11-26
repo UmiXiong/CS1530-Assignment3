@@ -44,6 +44,8 @@ public class PlaylistRecommenderTest {
       assertFalse(PlaylistRecommender.isValidTrackTitle("Track #1")); // contains '#', digit
       assertFalse(PlaylistRecommender.isValidTrackTitle("Song!"));    // punctuation
       assertFalse(PlaylistRecommender.isValidTrackTitle("No_good")); // underscore
+//      over 30 digits
+      assertFalse(PlaylistRecommender.isValidTrackTitle("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
     }
 
     @Test

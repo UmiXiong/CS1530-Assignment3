@@ -26,7 +26,7 @@ public class PlaylistRecommender {
     }
 
     public static boolean isValidTrackTitle(String title) {
-      if(title==null) return false;
+      if(title==null||title.length()<1||title.length()>30) return false;
       for(char c: title.toCharArray()){
         if(Character.isAlphabetic(c)||c==' ') continue;
         else return false;
